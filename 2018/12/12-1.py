@@ -2,7 +2,10 @@ sourceFile = open("source.txt","r")
 #sourceFile = open("testData.txt", "r")
 dataLines = sourceFile.readlines()
 
+<<<<<<< HEAD
 generations = 20
+=======
+>>>>>>> fcd997143c73d1d9290339b2abb46ebc886342ad
 potState = []
 boolRange = [None,None]
 paddingLeft = 0
@@ -71,6 +74,7 @@ def getNewGeneration():
     newGeneration = clipZeros(newGeneration)
     return newGeneration
 
+<<<<<<< HEAD
 def calculatePotCount():
     count = 0
     for pot in range(len(potState)):
@@ -83,3 +87,14 @@ for generation in range(generations):
     potState = getNewGeneration()
 
 print "generations: " + str(generations) + " : " + str(calculatePotCount())
+=======
+for generation in range(20):
+    potState = getNewGeneration()
+
+count = 0
+for pot in range(len(potState)):
+    if potState[pot] == 1:
+        count += pot -paddingLeft
+
+print str(count)
+>>>>>>> fcd997143c73d1d9290339b2abb46ebc886342ad
